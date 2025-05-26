@@ -1,0 +1,12 @@
+# Rover Connector Requirements
+# Python 3.7+ required
+# Install with: pip install -r requirements.txt
+#
+# Core dependencies with pinned major versions
+requests>=2.31.0,<3.0.0              # HTTP library with session support
+PyYAML>=6.0.1,<7.0.0                 # YAML configuration file parsing  
+cryptography>=41.0.7,<42.0.0         # Certificate handling (PFX/PKCS#12)
+certifi>=2023.7.22                   # Root certificates (updated frequently)
+urllib3>=2.0.7,<3.0.0                # HTTP client (security patches)
+charset-normalizer>=3.0.0,<4.0.0     # Character encoding detection
+idna>=3.4,<4.0                       # International domain names

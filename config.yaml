@@ -1,0 +1,51 @@
+# Rover Connector Configuration File
+# 
+# This file contains configuration settings for the Rover API connector.
+# All settings can also be provided via environment variables with the
+# prefix ROVER_ (e.g., ROVER_USERNAME, ROVER_PASSWORD, etc.)
+#
+# Environment variables take precedence over values in this file.
+
+# Authentication credentials (REQUIRED)
+username: "your_username_here"
+password: "your_password_here"
+
+# Certificate settings (REQUIRED)
+# Path to PFX/PKCS#12 certificate file for mutual TLS
+certificate_path: "/path/to/your/certificate.pfx"
+certificate_password: "your_certificate_password"
+
+# Environment settings
+# Options: "test" or "production"
+environment: "test"
+
+# Province code
+# Options: "ON" (Ontario) or "BC" (British Columbia)
+province: "ON"
+
+# Directory settings
+# Where to save downloaded HL7 messages
+incoming_dir: "./incoming"
+
+# Where to save log files
+log_dir: "./logs"
+
+# Timing settings (in seconds)
+# How often to check for new messages (default: 30 minutes)
+poll_interval: 1800
+
+# How long to pause when no messages are available (default: 10 minutes)
+pause_after_no_messages: 600
+
+# Session timeout - re-authenticate after this time (default: 15 minutes)
+session_timeout: 900
+
+# File permissions for saved messages (Unix octal notation)
+# 0o644 = read/write for owner, read-only for group/others
+file_permissions: 0o644
+
+# Advanced settings (optional)
+# Usually these are auto-configured based on province and environment
+# Only set these if you need to override the defaults
+# base_url: "https://api.ontest.excelleris.com/"
+# api_url: "https://api.ontest.excelleris.com/hl7pull.aspx"
